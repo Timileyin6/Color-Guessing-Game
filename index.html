@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Color Guessing Game</title>
+   <link rel="stylesheet" type="text/css" href="hng1.css">
+
+</head>
+<body>
+
+    
+    <div class="gameContainer" id="gameContainer">
+    	
+              	<h1 class="instruction" data-testid="gameInstructions">Guess the correct color</h1>
+
+              	<p class="gameScore" data-testid="score" id="score">SCORE : 0</p>
+       
+       <div class="targetColor" data-testid="colorBox"></div>
+
+       <p class="answer" data-testid="gameStatus" id="answer"></p>
+
+       <div class="optionContainer" id="option-container" data-testid="colorOption"></div>
+
+       <button class = "newGame" data-testid="newGameButton" onclick="resetGame()">NEW GAME</button>
+    </div>
+
+    <script type="text/javascript" src="hng.js"></script>
+
+</body>
+</html>
