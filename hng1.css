@@ -1,0 +1,105 @@
+*{
+     		padding: 0;
+     		margin: 0;
+     		border: none;
+     	}
+     	body{
+         background-image: url(babe.jpg);
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         text-align: center;
+     		font-family: cursive;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+     	}
+     	.gameContainer{
+         background: #ededed1a;
+         -webkit-backdrop-filter: blur(10px);
+         backdrop-filter: blur(10px);
+         box-shadow: 10px 17px 17px #0a0a0a40;
+         filter: drop-shadow(0 4px 5px rgb(17, 17, 17));
+
+         max-width: 400px;
+         padding: 20px;
+     		border: 1px solid white;
+         border-radius: 10px;
+     		box-shadow: 0 0 10px;
+         backdrop-filter: blur(80px);
+     	}
+
+      .targetColor{
+         width: 100px;
+         height: 100px;
+         margin: 20px auto;
+         border-radius: 10px;
+      }
+
+      .optionContainer{
+         display: flex;
+         flex-wrap: wrap;
+         gap: 5px;
+         justify-content: center;
+         margin: 20px;
+      }
+
+      .gameScore{
+         margin: 0 auto;
+         font-weight: bold;
+      }
+
+      button{
+         margin: 5px auto;
+         border-radius: 5px;
+         padding: 20px;
+         cursor: pointer;
+         transition: 0.4s;
+      }
+
+       .newGame{
+         background-color: darkgray;
+         padding: 10px;
+      }
+
+      button:active{
+         transform: scale(0.95);
+      }
+
+      @media (max-width: 200px){
+
+         .optionContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+
+         button{
+            width: 80%;
+         }
+      }
+
+      .bounce{
+         animation: correctdrop 0.6s ease-in-out;
+         color: green;
+      }
+
+      @keyframes correctdrop{
+         0% {transform: translateY(-30px);}
+         100% {transform: translateY(0px);}
+      }
+
+      .shake{
+         animation: wrongshake 0.2s ease-in-out;
+         color: red;
+      }
+
+      @keyframes  wrongshake{
+         0% {transform: translateX(-10px);}
+         20% {transform: translateX(10px);}
+         40%{transform: translateX(-10px);}
+         60%{transform: translateX(10px);}
+         80%{transform: translateX(-10px);}
+         100%{transform: translateX(10px);}
+      }
