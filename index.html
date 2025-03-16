@@ -3,57 +3,58 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Color Guessing Game</title>
-   <link rel="stylesheet" type="text/css" href="hng1.css">
-<script src="https://kit.fontawesome.com/1092d99708.js" crossorigin="anonymous"></script></head>
+	<title>Color Guessing Game : Choose Identical Color</title>
+	<link rel="stylesheet" href="home.css">
+</head>
 <body>
 
-    
-    <div class="gameContainer" id="gameContainer">
-    	
-              	<h1 class="instruction" data-testid="gameInstructions">Guess the correct color</h1>
+	<div class="container">
 
-               <div class="topPart">
+	<div class="header">
+	<h1>COLOR <span>GAME</span> </h1>
+</div>
 
-                  <span class="timer" id="timer"></span>
+<div class="newGame button">
+	<a href="game.html">
+	<p>NEW GAME</p>
+</a>
+</div>
 
-              	<p class="gameScore" data-testid="score" id="score">SCORE : 0</p>
+<div class="level button">
+	<a href="level.html">
+	<p>LEVEL</p>
+</a>		
+</div>
 
-               <span class="hearts" id="hearts">
-                  <i class="fa-solid fa-heart heart"></i>
-                  <i class="fa-solid fa-heart heart"></i>
-                  <i class="fa-solid fa-heart heart"></i>
-               </span>
+<div class="highscore button">
+	<a href="highscore.html">
+	<p>HIGHSCORE</p>
+</a>
+</div>
 
-              </div>
+<div class="rules button" id="rules">
+	<p>RULES</p>
+</div>
 
-       
-       <div class="targetColor" data-testid="colorBox"></div>
+<div class="rulesDrop" id="rulesDrop">
+	<p id="rulesP"></p>
+	<div id="rulesButt" onclick="homeReturn()"></div>
+</div>
 
-       <p class="answer" data-testid="gameStatus" id="answer"></p>
+<div class="reset button" id="reset">
+	<p>RESET</p>
+</div>
 
-       <div class="optionContainer" id="option-container" data-testid="colorOption"></div>
-
-       <button class = "newGame" data-testid="newGameButton" onclick="resetGame()">NEW GAME</button>
-
-           <div id="overlay"></div>
-
-    <div class="gameOver" id="gameOver">
-      <p class="gameOverText" id="gameOverText"></p>
-       <div class="gameOverButt" id="gameOverButt"></div>
-    </div>
-
-
-    </div>
-
-
-
+<div id="overlay"></div>
 
 
+<div class="resetDrop" id="resetDrop">
 
-    
-
-    <script type="text/javascript" src="hng.js"></script>
+<h1 id="dropDown"></h1>
+<div id="returnBut" onclick="restartGame()"></div>
+<div id="mistakeBut" onclick="restartGame()"></div>
+</div>
+<script src="home.js"></script>
 
 </body>
 </html>
