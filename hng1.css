@@ -4,31 +4,43 @@
      		border: none;
      	}
      	body{
-         background-image: url(babe.jpg);
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
+         background-color: skyblue;
          text-align: center;
-     		font-family: cursive;
+     		font-family: fantasy, sans-serif;
          display: flex;
          align-items: center;
          justify-content: center;
          height: 100vh;
      	}
      	.gameContainer{
-         background: #ededed1a;
-         -webkit-backdrop-filter: blur(10px);
-         backdrop-filter: blur(10px);
-         box-shadow: 10px 17px 17px #0a0a0a40;
-         filter: drop-shadow(0 4px 5px rgb(17, 17, 17));
-
+         background: #002147;
          max-width: 400px;
          padding: 20px;
      		border: 1px solid white;
          border-radius: 10px;
-     		box-shadow: 0 0 10px;
-         backdrop-filter: blur(80px);
      	}
+
+      h1{
+         color: beige;
+      }
+
+      .topPart{
+         display: flex;
+      }
+
+      .topPart i{
+         color: darkred;
+         font-size: 25px;
+      }
+
+      .timer{
+         border: 1px solid black;
+         color: beige;
+         padding: 5px;
+      }
 
       .targetColor{
          width: 100px;
@@ -48,6 +60,7 @@
       .gameScore{
          margin: 0 auto;
          font-weight: bold;
+         color: beige;
       }
 
       button{
@@ -67,6 +80,23 @@
          transform: scale(0.95);
       }
 
+      .button{
+        background-color: beige;
+        color: black;
+        font-size: 25px;
+        width: 250px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 20px auto 0px auto;
+        cursor: pointer;
+        transition: 0.7s;
+      }
+
+      .button:active{
+         transform: scale(0.9);
+      }
+
       @media (max-width: 200px){
 
          .optionContainer{
@@ -76,6 +106,16 @@
          }
 
          button{
+            width: 80%;
+         }
+
+         .gameOver{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100px;
+         }
+         .button{
             width: 80%;
          }
       }
@@ -102,4 +142,37 @@
          60%{transform: translateX(10px);}
          80%{transform: translateX(-10px);}
          100%{transform: translateX(10px);}
+      }
+
+      .overDropdown{
+         position: fixed;
+         top: 200px;
+         animation: gameOverDrop 0.7s ease-in-out !important;
+         background-color: #002147;
+         color: beige;
+         border: 1px solid black;
+         border-radius: 10px;
+         z-index: 1000;
+         padding: 20px;
+         line-height: 2em;
+      }
+
+      @keyframes gameOverDrop{
+         0%{transform: translateY(-500px);}
+         100%{transform: translateY(0px);}
+      }
+
+      #overlay{
+         position: fixed;
+         top: 0;
+         left: 0;
+         background: rgba(0, 0, 0, 0.5);
+         z-index: 999;
+         width: 100%;
+         height: 100%;
+         display: none;
+      }
+
+      .showOverlay{
+         display: block !important;
       }

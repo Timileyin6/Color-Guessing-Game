@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Color Guessing Game : Choose Identical Color</title>
+	<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+	<div class="container">
+
+	<div class="header">
+	<h1>COLOR <span>GAME</span> </h1>
+</div>
+
+<div class="newGame button">
+	<a href="index.html">
+	<p>NEW GAME</p>
+</a>
+</div>
+
+<div class="level button">
+	<a href="level.html">
+	<p>LEVEL</p>
+</a>		
+</div>
+
+<div class="highscore button">
+	<a href="highscore.html">
+	<p>HIGHSCORE</p>
+</a>
+</div>
+
+<div class="rules button" id="rules">
+	<p>RULES</p>
+</div>
+
+<div class="rulesDrop" id="rulesDrop">
+	<p id="rulesP"></p>
+	<div id="rulesButt" onclick="homeReturn()"></div>
+</div>
+
+<div class="reset button" id="reset">
+	<p>RESET</p>
+</div>
+
+<div id="overlay"></div>
+
+
+<div class="resetDrop" id="resetDrop">
+
+<h1 id="dropDown"></h1>
+<div id="returnBut" onclick="restartGame()"></div>
+<div id="mistakeBut" onclick="restartGame()"></div>
+</div>
+<script src="home.js"></script>
+
+</body>
+</html>

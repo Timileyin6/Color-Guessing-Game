@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>COLOR GUESSING GAME: HIGHSCORE</title>
+	<link rel="stylesheet" type="text/css" href="highscore.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>HIGH SCORE PAGE</h1>
+
+		<p>YOUR HIGH SCORE IS : <span id="highscore">0</span></p>
+
+		<p>YOUR TODAY'S BEST IS : <span id="highscore">0</span></p>
+		
+	</div>
+
+	<script type="text/javascript">
+		let highScore = localStorage.getItem("highScore")  || 0;
+		document.getElementById("highScore").innerHTML = highScore;
+	</script>
+
+</body>
+</html>
