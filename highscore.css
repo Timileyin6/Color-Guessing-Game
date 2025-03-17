@@ -26,6 +26,14 @@ background-color: skyblue;
 	background-color: #002147;
 }
 
+.arrow{
+         color: skyblue;
+         position: relative;
+         right: 150px;
+         font-size: 20px;
+      }
+
+
  h1{
 	font-size: 45px;
 	color: beige;

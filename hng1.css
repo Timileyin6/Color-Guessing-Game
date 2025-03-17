@@ -23,6 +23,13 @@
          border-radius: 10px;
      	}
 
+      .arrow{
+         color: skyblue;
+         position: relative;
+         right: 150px;
+         font-size: 20px;
+      }
+
       h1{
          color: beige;
       }
